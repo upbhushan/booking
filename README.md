@@ -2,6 +2,16 @@
 
 Tech: Node.js (Express) + Prisma + PostgreSQL + React (Vite) + Tailwind.
 
+## Submission Checklist
+
+- Frontend URL: https://booking-wundersight.vercel.app
+- API URL: https://booking-6.onrender.com
+- Patient: patient@example.com / Passw0rd!
+- Admin: admin@example.com / Passw0rd!
+- Repo URL: https://github.com/upbhushan/booking
+- Run locally: README steps verified
+- Postman/curl steps included
+
 ## Backend
 `cd backend`
 1. Copy `.env.example` to `.env` and set `DATABASE_URL` (Neon/Railway), `JWT_SECRET`.
