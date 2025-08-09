@@ -1,0 +1,16 @@
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply min-h-screen text-gray-900 bg-gradient-to-br from-brand-light via-white to-brand-light/40 antialiased; }
+
+@layer components {
+	.panel { @apply bg-white/80 backdrop-blur rounded-2xl border border-white/50 shadow-lg shadow-brand/10; }
+	.card { @apply bg-white/90 backdrop-blur rounded-xl border border-brand/10 hover:border-brand/30 shadow-sm hover:shadow-md transition; }
+	.gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-brand to-brand-dark; }
+}
+
+* { @apply transition-colors duration-150; }
+
+/* (Removed dark-mode specific animations & skeleton) */
