@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: booking-api
+    rootDir: backend
+    env: node
+    buildCommand: |
+      npm ci
+      npx prisma generate
+      npx prisma migrate deploy
+      npm run build
+    startCommand: npm run start
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
+      - key: ADMIN_SIGNUP_KEY
+        sync: false
+      # Optional - remove these after first deploy and seed
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: NODE_ENV
+        value: production
